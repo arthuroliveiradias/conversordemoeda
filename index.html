@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reais em dolars</title>
+</head>
+<body>
+
+    <input type="checkbox" name="#" id="toggle" class="toggle-btn">
+    <label for="toggle" class="toggle-label"></label>
+    
+
+    <script src="btn.js"></script>
+
+
+
+
+    <div class="container">
+        <h1>mudar real para dolar</h1>
+        <input type="number" id="reais" placeholder="digite o valor em reais">
+        <button onclick="converter()">converter</button>
+        <div id="resultado"></div>
+
+    </div>
+
+    <script>
+      function converter() {
+            var valorReais = parseFloat(document.getElementById('reais').value);
+            var valorDolar = valorReais / 5.06; // Considerando 1 dólar equivalente a 5.5 reais
+
+            document.getElementById('resultado').innerHTML = "Valor em dólares: $ " + valorDolar.toFixed(2);
+        }
+
+
+    </script>
+
+<footer>
+    <p>Desenvolvido Por: <cite>Arthur Dias </cite>&copy;&reg;</p>
+</footer>
+    
+</body>
+</html>
